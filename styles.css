@@ -1,0 +1,140 @@
+body{
+    margin:0;
+    background-color: #4e3cd6;
+}
+
+#container{
+    position: relative;
+    width:100%;
+    height:300px;
+    display:grid;
+    grid-gap: 5px;
+    grid-template-columns: auto;
+    grid-template-rows:auto;
+    background-color: white;
+    font-family: "Quicksand", sans-serif;
+    width:400px;
+    align-content:center;
+    left:calc((100% - 400px)/2);
+    /*transform:translateX(-50%);
+    padding-top:calc(235px); */
+    top:calc(50vh - 150px);
+}
+
+#container > *{
+    text-align: center;
+}
+
+#title{
+    margin:0;
+}
+
+#header{
+    grid-row:1;
+    height:50px;
+}
+
+#header > * {
+    position:relative;
+    display:inline-block;
+    vertical-align: middle;
+    line-height: normal;
+    font-size: 40px;
+}
+
+button{
+   background-color:#4e3cd6; 
+   border:none;
+   text-decoration: none;
+   font-size: 15px;
+   color:white;
+   padding:10px 20px;
+}
+
+input{
+    height:31px;
+    padding:0;
+    margin:0;
+}
+
+#restart{
+    grid-row:2;
+    margin:0;
+}
+
+#clue{
+    grid-row:3;
+    margin:0;
+}
+
+#clue > *{
+    position:relative;
+    vertical-align: middle;
+    line-height: normal;
+    margin:0;
+}
+
+#inputControl{
+    grid-row:4;
+    margin:0;
+    vertical-align: middle;
+    border-color:black;
+    border-radius: 2px;
+}
+
+#inputControl > *{
+    position:relative;
+    display:inline-block;
+    vertical-align: middle;
+    text-align: center;
+    line-height: normal;
+    
+}
+
+#gameMessage{
+    grid-row:5;
+    margin:0;
+    vertical-align: middle;
+}
+
+#guesses{
+    grid-row:6;
+    margin:0;
+    vertical-align: middle;
+}
+
+#guesses > *{
+    position:relative;
+    display:inline-block;
+    vertical-align: middle;
+    text-align: center;
+    line-height: normal;
+}
+
+.shake{
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+    0%{
+        transform: translateX(0);
+        border-color:black;
+        border-radius: 0px;
+    }
+    25%{
+        transform:translateX(-5px);
+    }
+    50%{
+        transform:translateX(5px);
+        border-color:red;
+        border-radius: 2px;
+    }
+    75%{
+        transform:translateX(-5px);
+    }
+    100%{
+        transform:translateX(0);
+        border-color: black;
+        border-radius: 0px;
+    }
+}
